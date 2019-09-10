@@ -1,37 +1,42 @@
-###About
-The basis of the application is a job board where anyone looking to get hired can come and apply for positions. If you are a user or company looking to post a job you can sign up for an account and do so for a fee.
+### About
+The basis of the application is a job board for the music industry where anyone looking to get hired can come and apply for positions. If you are a user or company looking to post a job you can sign up for an account and do so for a fee.
 
 If there are errors along the way the form will offer error feedback for both the Rails based form and the Stripe based form.
-
-### Stripe Integration
-Pain in the ass
 
 ###
 The main models utilized in this project are the `User` model and the `Job` model.
 
-### Jobs
-Each `Job` will house quite a few fields of which are important for any type of job listing online.
-Each `Job` will feature the following:
+### Wire frame
+https://docs.google.com/document/d/1hDGH_TfuARYvMss7pLsL3PxinwSyFyO7Ondkgau2Kko/edit?usp=sharing
 
-- Title -  `title:`
-- Description - `description:text`
-- Logo Avatar - via [Carrierwave](https://github.com/carrierwaveuploader/carrierwave) - `avatar:string`
-- Website URL - `url:string`
-- Type: Fulltime, Part-Time, Freelance, Contract `job_type:string`
-- Location - `location:string`
-- User ID - `user_id:integer`
-- Remote ok - `remote_ok: boolean, default: false`
-- apply_url - `apply_url:string`
 
-Each `User` will have:
+### Stacks used:
+-Ruby on Rails
+gems:
+1. bulma-rails for css
+2. devise ; learned to customized it
+3. simple form: super easy to integrate with bootstrap and form layout's been taken care off
+4. gravatar-img-tag
+5. sidekiq; minimizes latency
+6. carrierwave; supposed to help with avatar uploading but didn't really end up using it
+7. mini-magick; end up having more problems trying to use this. It's there but I'l try it out eventually.
+8. stripe; HOLY SHIT!
+9. trix; could't get it to work with another WYSIWYG gem that I tried impementing. Kept getting major errors. Weird. I'll get back to this. Unfortunately, my description tag for job post looks unformatted. Dang.
+10. figaro; not the opera by Mozart. This really helps to secure the application especially when you want to implement payment and sensitive data, having API keys etc. it hides my stripe API keys(application.yml)
 
-- Name - `name:string`
-- Email - `email:string`
-- Stripe ID - `stripe_id:string`
-- Card Type - `card_type:string`
-- Card Last 4 - `card_last4:string`
-- Card Exp Mo - `card_exp_month:string`
-- Card Exp Year - `card_exp_year:string`
-- Expires at - `expires_at:datetime`
-- Admin - `admin:boolean`
-# musicalchair
+### Database
+-Postgres; search_development
+
+### APIs used
+-Stripe Sandbox API
+
+### General Approach to build the App:
+I started on the Stripe API, as this is my first time working with an API, the learning curve is pretty steep. Thankfully, STRIPE docs are super helpful and there are lots of STRIPE API tutorials out there. Spent most of the time on STRIPE and new gems.
+
+### Problems:
+I’m having major problem with committing to a different git account. I think the issue is with my email account. Unable to push to my repo for a long time. Moved over to ssh and problem solved.
+I got locked out of my git (axel@thejacobs.io account). Good thing, I saved hard copies on the laptop.
+new git account -> xjcobb@gmail.com.
+
+### Unsolved problems:
+The logo that users upload are not rendered. Likely, the backend and avatar are not rendered.
