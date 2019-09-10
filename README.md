@@ -9,7 +9,6 @@ The main models utilized in this project are the `User` model and the `Job` mode
 ### Wire frame
 https://docs.google.com/document/d/1hDGH_TfuARYvMss7pLsL3PxinwSyFyO7Ondkgau2Kko/edit?usp=sharing
 
-
 ### Stacks used:
 -Ruby on Rails
 gems:
@@ -32,6 +31,14 @@ gems:
 
 ### General Approach to build the App:
 I started on the Stripe API, as this is my first time working with an API, the learning curve is pretty steep. Thankfully, STRIPE docs are super helpful and there are lots of STRIPE API tutorials out there. Spent most of the time on STRIPE and new gems.
+1. STRIPE API implementation
+2. Customize DEVISE using bulma-rails ideas
+3. Set up controllers/ & views/
+4. Did some logs for errors public/
+5. Learn testing -> https://guides.rubyonrails.org/v5.0/testing.html
+
+### New features(in progress):
+Adding google maps to location of company/events
 
 ### Problems:
 I’m having major problem with committing to a different git account. I think the issue is with my email account. Unable to push to my repo for a long time. Moved over to ssh and problem solved.
