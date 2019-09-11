@@ -47,3 +47,13 @@ new git account -> xjcobb@gmail.com.
 
 ### Unsolved problems:
 The logo that users upload are not rendered. Likely, the backend and avatar are not rendered.
+
+# USER STORY:
+
+# USE CASES:
+
+# ASSUMPTIONS:
+
+# CHALLENGES:
+
+# PROOF OF CONCEPT:
